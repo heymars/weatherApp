@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cityLookUpFragment">
+
+    <fragment
+        android:id="@+id/cityLookUpFragment"
+        android:name="com.sujeet.weatherapp.ui.CityLookUpFragment"
+        android:label="fragment_city_look_up"
+        tools:layout="@layout/fragment_city_look_up" >
+        <action
+            android:id="@+id/action_cityLookUpFragment_to_weatherForecastFragment"
+            app:destination="@id/weatherForecastFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherForecastFragment"
+        android:name="com.sujeet.weatherapp.ui.weatherforecast.WeatherForecastFragment"
+        android:label="fragment_weather_forecast"
+        tools:layout="@layout/fragment_weather_forecast" >
+        <action
+            android:id="@+id/action_weatherForecastFragment_to_weatherDetailFragment"
+            app:destination="@id/weatherDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailFragment"
+        android:name="com.sujeet.weatherapp.ui.weatherdetail.WeatherDetailFragment"
+        android:label="fragment_weather_detail"
+        tools:layout="@layout/fragment_weather_detail" />
+</navigation>
